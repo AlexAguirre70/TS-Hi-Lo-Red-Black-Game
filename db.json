@@ -1,0 +1,12 @@
+{
+    "cards":[
+        {
+            "cardId":"",
+            "cardSuit": "",
+            "cardValue":"",
+            "cardImageUrl":""
+            
+        }
+
+    ]
+}
