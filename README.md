@@ -3,7 +3,8 @@ If the player guesses right, they will win their bet amount. If they lose, it wi
 
 Game requires that each card be stored in an object class with properties of
 CardSuit:
-CardValue:
+CardId:
+CardValue
 CardColor:
 CardImage:
 
@@ -20,3 +21,5 @@ to determine the players choice
 One Selected. The player must push the Deal Card button.
 
 The Dealer's card is randomized and selected in the gamescript.js
+
+Playing card images downloaded from source: https://code.google.com/archive/p/vector-playing-cards/downloads

@@ -2,10 +2,10 @@
     "cards":[
         {
             "cardId":"",
+            "cardName":"",
             "cardSuit": "",
             "cardValue":"",
             "cardImageUrl":""
-            
         }
 
     ]
