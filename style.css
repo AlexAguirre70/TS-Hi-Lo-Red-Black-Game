@@ -1,0 +1,7 @@
+#cardTable {
+    background-image: url(./images/engin-akyurt-HEMIBJ8QQuA-unsplash.jpg)
+}
+.card {
+    width: 300px; 
+    display: inline-block;
+}

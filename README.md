@@ -22,4 +22,8 @@ One Selected. The player must push the Deal Card button.
 
 The Dealer's card is randomized and selected in the gamescript.js
 
-Playing card images downloaded from source: https://code.google.com/archive/p/vector-playing-cards/downloads
+Playing card images downloaded from source: https://code.google.com/archive/p/vector-playing-cards/downloadsBV
+Poker table image coutesy of : Photo by Engin Akyurt
+
+<a href="https://unsplash.com/@enginakyurt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">engin akyurt</a> on <a href="https://unsplash.com/s/photos/green-color?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  

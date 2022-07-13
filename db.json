@@ -1,12 +1,424 @@
 {
     "cards":[
+        //Clubs
         {
-            "cardId":"",
-            "cardName":"",
-            "cardSuit": "",
-            "cardValue":"",
-            "cardImageUrl":""
-        }
-
+            "cardId":"1",
+            "cardName":"2 of Clubs",
+            "cardSuit": "Clubs",
+            "cardValue":2,
+            "cardColor":"Black",
+            "cardImageUrl" : "./images/2_of_clubs.png"
+        },
+        {
+            "cardId":"2",
+            "cardName":"3 of Clubs",
+            "cardSuit": "Clubs",
+            "cardValue":3,
+            "cardColor":"Black",
+            "cardImageUrl": "./images/3_of_clubs.png"
+        },
+        {
+            "cardId":"3",
+            "cardName":"4 of Clubs",
+            "cardSuit": "Clubs",
+            "cardValue":4,
+            "cardColor":"Black",
+            "cardImageUrl" : "./images/4_of_clubs.png"
+        },
+        {
+            "cardId":"4",
+            "cardName":"5 of Clubs",
+            "cardSuit": "Clubs",
+            "cardValue":5,
+            "cardColor":"Black",
+            "cardImageUrl": "./images/5_of_clubs.png"
+        },
+        {
+            "cardId":"5",
+            "cardName":"6 of Clubs",
+            "cardSuit": "Clubs",
+            "cardValue": 6,
+            "cardColor":"Black",
+            "cardImageUrl": "./images/6_of_clubs.png"
+        },
+        {
+            "cardId":"6",
+            "cardName":"7 of Clubs",
+            "cardSuit": "Clubs",
+            "cardValue":7,
+            "cardColor":"Black",
+            "cardImageUrl": "./images/7_of_clubs.png"
+        },
+        {
+            "cardId":"7",
+            "cardName":"8 of Clubs",
+            "cardSuit": "Clubs",
+            "cardValue":8,
+            "cardColor":"Black",
+            "cardImageUrl": "./images/8_of_clubs.png"
+        },
+        {
+            "cardId":"8",
+            "cardName":"9 of Clubs",
+            "cardSuit": "Clubs",
+            "cardValue":9,
+            "cardColor":"Black",
+            "cardImageUrl": "./images/9_of_clubs.png"
+        },
+        {
+            "cardId":"9",
+            "cardName":"10 of Clubs",
+            "cardSuit": "Clubs",
+            "cardValue":10,
+            "cardColor":"Black",
+            "cardImageUrl": "./images/10_of_clubs.png"
+        },
+        {
+            "cardId":"10",
+            "cardName":"Jack of Clubs",
+            "cardSuit": "Clubs",
+            "cardValue":11,
+            "cardColor":"Black",
+            "cardImageUrl": "./images/jack_of_clubs.png"
+        },
+        {
+            "cardId":"11",
+            "cardName":"Queen of Clubs",
+            "cardSuit": "Clubs",
+            "cardValue": 12,
+            "cardColor":"Black",
+            "cardImageUrl": "./images/queen_of_clubs.png"
+        },
+        {
+            "cardId":"12",
+            "cardName":"King of Clubs",
+            "cardSuit": "Clubs",
+            "cardValue":13,
+            "cardColor":"Black",
+            "cardImageUrl": "./images/king_of_clubs.png"
+        },
+        {
+            "cardId":"13",
+            "cardName":"Ace of Clubs",
+            "cardSuit": "Clubs",
+            "cardValue":14,
+            "cardColor":"Black",
+            "cardImageUrl" :"./images/ace_of_clubs.png"
+        },
+        //Spades
+        {
+            "cardId":"14",
+            "cardName":"2 of Spades",
+            "cardSuit": "Spades",
+            "cardValue":2,
+            "cardColor":"Black",
+            "cardImageUrl":  "./images/2_of_spades.png"
+        },
+        {
+            "cardId":"15",
+            "cardName":"3 of Spades",
+            "cardSuit": "Spades",
+            "cardValue":3,
+            "cardColor":"Black",
+            "cardImageUrl":  "./images/3_of_spades.png"
+        },
+        {
+            "cardId":"16",
+            "cardName":"4 of Spades",
+            "cardSuit": "Spades",
+            "cardValue":4,
+            "cardColor":"Black",
+            "cardImageUrl":  "./images/4_of_spades.png"
+        },
+        {
+            "cardId":"17",
+            "cardName":"5 of Spades",
+            "cardSuit": "Spades",
+            "cardValue":5,
+            "cardColor":"Black",
+            "cardImageUrl":  "./images/5_of_spades.png"
+        },
+        {
+            "cardId":"18",
+            "cardName":"6 of Spades",
+            "cardSuit": "Spades",
+            "cardValue":6,
+            "cardColor":"Black",
+            "cardImageUrl":  "./images/6_of_spades.png"
+        },
+        {
+            "cardId":"19",
+            "cardName":"7 of Spades",
+            "cardSuit": "Spades",
+            "cardValue":7,
+            "cardColor":"Black",
+            "cardImageUrl":  "./images/7_of_spades.png"
+        },
+        {
+            "cardId":"20",
+            "cardName":"8 of Spades",
+            "cardSuit": "Spades",
+            "cardValue":8,
+            "cardColor":"Black",
+            "cardImageUrl":  "./images/8_of_spades.png"
+        },
+        {
+            "cardId":"21",
+            "cardName":"9 of Spades",
+            "cardSuit": "Spades",
+            "cardValue":9,
+            "cardColor":"Black",
+            "cardImageUrl":  "./images/9_of_spades.png"
+        },
+        {
+            "cardId":"22",
+            "cardName":"10 of Spades",
+            "cardSuit": "Spades",
+            "cardValue":10,
+            "cardColor":"Black",
+            "cardImageUrl":  "./images/10_of_spades.png"
+        },
+        {
+            "cardId":"23",
+            "cardName":"Jack of Spades",
+            "cardSuit": "Spades",
+            "cardValue":11,
+            "cardColor":"Black",
+            "cardImageUrl":  "./images/jack_of_spades.png"
+        },
+        {
+            "cardId":"24",
+            "cardName":"Queen of Spades",
+            "cardSuit": "Spades",
+            "cardValue":12,
+            "cardColor":"Black",
+            "cardImageUrl":  "./images/queem_of_spades.png"
+        },
+        {
+            "cardId":"25",
+            "cardName":"King of Spades",
+            "cardSuit": "Spades",
+            "cardValue":13,
+            "cardColor":"Black",
+            "cardImageUrl":  "./images/king_of_spades.png"
+        },
+        {
+            "cardId":"26",
+            "cardName":"Ace of Spades",
+            "cardSuit": "Spades",
+            "cardValue":14,
+            "cardColor":"Black",
+            "cardImageUrl":  "./images/ace_of_spades.png"
+         },
+    //Diamonds
+        {
+            "cardId":"27",
+            "cardName":"2 of Diamonds",
+            "cardSuit": "Diamonds",
+            "cardValue":2,
+            "cardColor":"Red",
+            "cardImageUrl":  "./images/2_of_diamonds.png"
+        },
+        {
+            "cardId":"28",
+            "cardName":"3 of Diamonds",
+            "cardSuit": "Diamonds",
+            "cardValue":3,
+            "cardColor":"Red",
+            "cardImageUrl":  "./images/3_of_diamonds.png"
+        },
+        {
+            "cardId":"29",
+            "cardName":"4 of Diamonds",
+            "cardSuit": "Diamonds",
+            "cardValue":4,
+            "cardColor":"Red",
+            "cardImageUrl":  "./images/4_of_diamonds.png"
+        },
+        {
+            "cardId":"30",
+            "cardName":"5 of Diamonds",
+            "cardSuit": "Diamonds",
+            "cardValue":5,
+            "cardColor":"Red",
+            "cardImageUrl":  "./images/5_of_diamonds.png"
+        },
+        {
+            "cardId":"31",
+            "cardName":"6 of Diamonds",
+            "cardSuit": "Diamonds",
+            "cardValue":6,
+            "cardColor":"Red",
+            "cardImageUrl":  "./images/6_of_diamonds.png"
+        },
+        {
+            "cardId":"32",
+            "cardName":"7 of Diamonds",
+            "cardSuit": "Diamonds",
+            "cardValue":7,
+            "cardColor":"Red",
+            "cardImageUrl":  "./images/7_of_diamonds.png"
+        },
+        {
+            "cardId":"33",
+            "cardName":"8 of Diamonds",
+            "cardSuit": "Diamonds",
+            "cardValue":8,
+            "cardColor":"Red",
+            "cardImageUrl":  "./images/8_of_diamonds.png"
+        },
+        {
+            "cardId":"34",
+            "cardName":"9 of Diamonds",
+            "cardSuit": "Diamonds",
+            "cardValue":9,
+            "cardColor":"Red",
+            "cardImageUrl":  "./images/9_of_diamonds.png"
+        },
+        {
+            "cardId":"35",
+            "cardName":"10 of Diamonds",
+            "cardSuit": "Diamonds",
+            "cardValue":10,
+            "cardColor":"Red",
+            "cardImageUrl":  "./images/10_of_diamonds.png"
+        },
+        {
+            "cardId":"36",
+            "cardName":"Jack of Diamonds",
+            "cardSuit": "Diamonds",
+            "cardValue":11,
+            "cardColor":"Red",
+            "cardImageUrl":  "./images/jack_of_diamonds.png"
+        },
+        {
+            "cardId":"37",
+            "cardName":"Queen of Diamonds",
+            "cardSuit": "Diamonds",
+            "cardValue":12,
+            "cardColor":"Red",
+            "cardImageUrl":  "./images/quuen_of_diamonds.png"
+        },
+        {
+            "cardId":"38",
+            "cardName":"King of Diamonds",
+            "cardSuit": "Diamonds",
+            "cardValue":13,
+            "cardColor":"Red",
+            "cardImageUrl":  "./images/king_of_diamonds.png"
+        },
+        {
+            "cardId":"39",
+            "cardName":"Ace of Diamonds",
+            "cardSuit": "Diamonds",
+            "cardValue":14,
+            "cardColor":"Red",
+            "cardImageUrl":  "./images/ace_of_diamonds.png"
+        },
+    // Hearts
+        {
+            "cardId":"40",
+            "cardName":"2 of Hearts",
+            "cardSuit": "Hearts",
+            "cardValue":2,
+            "cardColor":"Red",
+            "cardImageUrl":  "./images/2_of_hearts.png"
+        },
+        {
+            "cardId":"41",
+            "cardName":"3 of Hearts",
+            "cardSuit": "Hearts",
+            "cardValue":3,
+            "cardColor":"Red",
+            "cardImageUrl":  "./images/3_of_hearts.png"
+        },
+        {
+            "cardId":"42",
+            "cardName":"4 of Hearts",
+            "cardSuit": "Hearts",
+            "cardValue":4,
+            "cardColor":"Red",
+            "cardImageUrl":  "./images/4_of_hearts.png"
+        },
+        {
+            "cardId":"43",
+            "cardName":"5 of Hearts",
+            "cardSuit": "Hearts",
+            "cardValue":5,
+            "cardColor":"Red",
+            "cardImageUrl":  "./images/5_of_hearts.png"
+        },
+        {
+            "cardId":"44",
+            "cardName":"6 of Hearts",
+            "cardSuit": "Hearts",
+            "cardValue":6,
+            "cardColor":"Red",
+            "cardImageUrl":  "./images/6_of_hearts.png"
+        }, 
+        {
+            "cardId":"45",
+            "cardName":"7 of Hearts",
+            "cardSuit": "Hearts",
+            "cardValue":7,
+            "cardColor":"Red",
+            "cardImageUrl":  "./images/7_of_hearts.png"
+        },
+        {
+            "cardId":"46",
+            "cardName":"8 of Hearts",
+            "cardSuit": "Hearts",
+            "cardValue":8,
+            "cardColor":"Red",
+            "cardImageUrl":  "./images/8_of_hearts.png"
+        },
+        {
+            "cardId":"47",
+            "cardName":"9 of Hearts",
+            "cardSuit": "Hearts",
+            "cardValue":9,
+            "cardColor":"Red",
+            "cardImageUrl":  "./images/9_of_hearts.png"
+        },
+        {
+            "cardId":"48",
+            "cardName":"10 of Hearts",
+            "cardSuit": "Hearts",
+            "cardValue":10,
+            "cardColor":"Red",
+            "cardImageUrl":  "./images/10_of_hearts.png"
+        },
+        {
+            "cardId":"49",
+            "cardName":"Jack of Hearts",
+            "cardSuit": "Hearts",
+            "cardValue":11,
+            "cardColor":"Red",
+            "cardImageUrl":  "./images/jack_of_hearts.png"
+        },
+        {
+            "cardId":"50",
+            "cardName":"Queem of Hearts",
+            "cardSuit": "Hearts",
+            "cardValue":12,
+            "cardColor":"Red",
+            "cardImageUrl":  "./images/queen_of_hearts.png"
+        },
+        {
+            "cardId":"51",
+            "cardName":"King of Hearts",
+            "cardSuit": "Hearts",
+            "cardValue":13,
+            "cardColor":"Red",
+            "cardImageUrl":  "./images/king_of_hearts.png"
+        },
+        {
+            "cardId":"52",
+            "cardName":"Ace of Hearts",
+            "cardSuit": "Hearts",
+            "cardValue":14,
+            "cardColor":"Red",
+            "cardImageUrl":  "./images/ace_of_hearts.png"
+        }      
     ]
 }
