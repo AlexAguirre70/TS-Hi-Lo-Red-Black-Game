@@ -1,7 +1,61 @@
+h1 {
+    
+    text-shadow: 3px 3px 8px gray;
+    margin: 0px;
+}
+#gameTitle {
+    padding-top: 20px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 3em;
+}
+
+h2 {
+   color: red;
+   font-size: 2em;
+   text-shadow: 3px 3px 8px gray;
+   margin: 0px;
+}
+h3 {
+    font-size: 1.25em;
+    color: white;
+}
+section {
+        text-align: center;
+        padding: 25px;
+    }   
+
 #cardTable {
-    background-image: url(./images/engin-akyurt-HEMIBJ8QQuA-unsplash.jpg)
+    background-size: cover;
+    max-width:1980px;
+    max-height: 1080px;
+    min-height: 400px;
+    background-image: url(./images/background-table.png);
 }
 .card {
-    width: 300px; 
     display: inline-block;
+    width: 200px; 
+    margin: 10px;
+}
+.btn {
+    width: 150px;
+    font-size: 1.25em;
+    font-weight: 600;
+    padding:10px;
+    border-radius: 10px;
+    border-color: transparent;
+    margin:10px;
+}
+#lower {
+    margin-right: 25px;
+}
+#red {
+    background-color: red;
+    color: white;
+    margin-left: 25px;
+}
+#black {
+    background-color: black;
+    color: white;
 }

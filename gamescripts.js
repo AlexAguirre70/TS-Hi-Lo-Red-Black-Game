@@ -1,4 +1,25 @@
 /*These are the functions to run the card game */
+let wallet = 500;
+let wager = 0;
+let winnings=0;
+let losses=0;
+let dCard = {
+    cardId:"",
+    cardName:"",
+    cardSuit:"",
+    cardValue:0,
+    cardColor:"",
+    cardImg:""
+}
+let pCard = {
+    cardId:"",
+    cardName:"",
+    cardSuit:"",
+    cardValue:0,
+    cardColor:"",
+    cardImg:""
+}
+Let gameResult ="Let's Play! Start by Making a Wager!"
 
 // Create variables to hold the values needed for the game
 
