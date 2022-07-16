@@ -4,7 +4,8 @@ h1 {
     margin: 0px;
 }
 #gameTitle {
-    padding-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -20,23 +21,53 @@ h2 {
 h3 {
     font-size: 1.25em;
     color: white;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+form {
+    margin-top:20px;
+}
+label{
+    font-size: 1.5em;
+    color: white;
+    font-weight: 600;
+    margin-right: 15px;
+}
+.money h3{
+    font-size: 2.0em;
+    margin: 0px;
+    padding: 10px;
 }
 section {
         text-align: center;
         padding: 25px;
     }   
-
+ .money{
+        display: inline-block;
+        margin: 20px;
+        vertical-align: top;
+    }
 #cardTable {
     background-size: cover;
     max-width:1980px;
     max-height: 1080px;
     min-height: 400px;
+    padding-bottom: 25px;
     background-image: url(./images/background-table.png);
 }
 .card {
     display: inline-block;
     width: 200px; 
     margin: 10px;
+}
+.container{
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.container h3{
+    font-size: 1.5em;
+    color: black;
+    text-shadow: 3px 3px 10px white;
 }
 .btn {
     width: 150px;
@@ -47,15 +78,19 @@ section {
     border-color: transparent;
     margin:10px;
 }
+.btn:disabled {
+background-color: #666666 ;
+color: #cccccc;    
+}
 #lower {
     margin-right: 25px;
 }
-#red {
+#red:enabled {
     background-color: red;
     color: white;
     margin-left: 25px;
 }
-#black {
+#black:enabled {
     background-color: black;
     color: white;
 }

@@ -5,42 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hi-Low-Red-or-Black</title>
-    <script src="/gamescripts.js"></script>
+   
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 <!-- Title Section -->
-<section id="gameTitle">
+<section id="gameTitle">    
     <h1>Hi - Low  / <span style="color: red;">Red</span> or Black</h1> 
 </section>
 
 <!-- Card table section -->
  <section id="cardTable">
     <!-- Create inside Card Table Section : Wallet and Wager Section -->
-    <h3>Your Wallet</h3>
-    <h3>Your wager</h3>
-
+    <div>
+        <div class="money">
+        <h3>Your Wallet</h3> 
+        <h3 id="myWallet">0</h3>
+        </div>
+        <div class="money">
+        <h3>Your Wager</h3>
+        <form>
+            <input type="radio" id="5" name="bet" value="5">
+            <label for="bet">$5</label>
+            <input type="radio" id="10" name="bet" value="10">
+            <label for="bet">$10</label>
+            <input type="radio" id="25" name="bet" value="25">
+            <label for="bet">$25</label>
+            <input type="radio" id="100" name="bet" value="100">
+            <label for="bet">$100</label>
+          </form>
+        </div>
+    </div>
     <!-- Create the Cards Display Section: Dealers Card and Player Card -->
-    <img id="dealerCard" class="card" src='./images/playing-card-back.jpg'>
-    <img id="playerCard" class="card" src='./images/playing-card-back.jpg'>
-    
-    <h3>Dealer Card</h3>
-    <h3>Player Card</h3>
+    <div>
+        <div class="container">
+            <h3>Dealer Card</h3>    
+            <img id="dealerCard" class="card" src='./images/playing-card-back.jpg'>
+        </div>
+        <div class="container">
+            <h3>Player Card</h3>
+            <img id="playerCard" class="card" src='./images/playing-card-back.jpg'>
+        </div>
+    </div>
 
     <!-- Create the Game buttoon section : 4 Buttons -->
     <div id="buttons">
         <button type="button" class="btn" id="higher">Higher <span style="font-size:1.3em">&#8679</span></button>
-        <button type="button" class="btn" id="higher" >Lower <span style="font-size:1.3em">&#8681</span></button>
+        <button type="button" class="btn" id="lower" >Lower <span style="font-size:1.3em">&#8681</span></button>
         <button type="button" class="btn" id="red">Red</button>
         <button type="button" class="btn" id="black" >Black</button>
-     </div>
+    </div>
 </section>
  
 <!-- The win or lose result banner section -->
  <section id="gameResult">
-    <h2>Let's Play! Start by Making a Wager!</h2>
+    <h2 id="message">Let's Play! Start by Making a Wager!</h2>
  </section>
-    
-
+ <script src="gamescripts.js"></script>
 </body>
 </html>
