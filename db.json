@@ -1,6 +1,5 @@
 {
     "cards":[
-        //Clubs
         {
             "cardId":"1",
             "cardName":"2 of Clubs",
@@ -105,7 +104,6 @@
             "cardColor":"Black",
             "cardImageUrl" :"./images/ace_of_clubs.png"
         },
-        //Spades
         {
             "cardId":"14",
             "cardName":"2 of Spades",
@@ -210,7 +208,6 @@
             "cardColor":"Black",
             "cardImageUrl":  "./images/ace_of_spades.png"
          },
-    //Diamonds
         {
             "cardId":"27",
             "cardName":"2 of Diamonds",
@@ -315,7 +312,6 @@
             "cardColor":"Red",
             "cardImageUrl":  "./images/ace_of_diamonds.png"
         },
-    // Hearts
         {
             "cardId":"40",
             "cardName":"2 of Hearts",

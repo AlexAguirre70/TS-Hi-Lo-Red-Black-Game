@@ -1,24 +1,18 @@
+import myJson from './db.json' assert{type:'json'};
+
+
 /*These are the functions to run the card game */
 let wallet=0;
 let wager=0;
 let winnings=0;
 let losses=0;
-let dCard = {
-    cardId:"",
-    cardName:"",
-    cardSuit:"",
-    cardValue:0,
-    cardColor:"",
-    cardImg:""
-}
-let pCard = {
-    cardId:"",
-    cardName:"",
-    cardSuit:"",
-    cardValue:0,
-    cardColor:"",
-    cardImg:""
-}
+let dValue=0;
+let dColor="";
+let dName="";
+let pValue=0;
+let pColor="";
+let pName="";
+
 let gameResult ="Let's Play! Start by Making a Wager!"
 
 // wait for window to load before running scripts
@@ -28,19 +22,22 @@ window.onload = (event)=>{
     // disable deal buttons on load
      disableBtn();
      betListener();
+     dealerCard();
     }
 // Function to disable button
 function disableBtn(){
     let dButton = document.getElementsByClassName('btn')
-    for(i=0; i<dButton.length;i++){
-        dButton[i].disabled=true;
+    let x= 0
+    for (x;x<dButton.length;x++){
+        dButton[x].disabled=true;
     }
 }
 
 // Event listener for Wager input field 
 function  betListener(){
     let radioBtn=document.getElementsByName('bet')
-        for(i=0;i<radioBtn.length;i++){
+        let i=0;
+        for(i;i<radioBtn.length;i++){
         radioBtn[i].addEventListener('change',function(e){
              wager=e.target.value
         //validate the wager amount
@@ -62,37 +59,65 @@ function  betListener(){
 }    
 //Deal the Dealer Card Function
 function dealerCard(){
-    
+    setTimeout(()=> {
+        let randomDCard = (Math.floor(Math.random()*51))+1
+            dValue= myJson.cards[randomDCard].cardValue
+            document.getElementById('dealerCard').src = myJson.cards[randomDCard].cardImageUrl
+    },3000)
+}
+//Deal the Player Card randomized function
+function playerCard(){
+    setTimeout(()=> {
+        let randomDCard = (Math.floor(Math.random()*51))+1
+            pValue= myJson.cards[randomDCard].cardValue
+            document.getElementById('playerCard').src = myJson.cards[randomDCard].cardImageUrl
+    },1000)
 }
 
 //enable the Game Card selection buttons
     function activateBtn() {
         let eButton = document.getElementsByClassName('btn')
-        for(i=0; i<eButton.length;i++){
+        let i=0
+        for(i; i<eButton.length;i++){
             eButton[i].disabled=false;
         }   
     }
+ 
 //Hi - Lo Game Selected Function
+function higherCard(){
+    playerCard();
 
-    //Event Listeners for Hi - Lo
-
+}
+function lowerCard(){
+    playerCard();
+} 
 //Red or Black game function
-    
-    //Event Listeners for Red or Black
+function blackCard(){
+    playerCard();
+}
+function redCard(){
+    playerCard();
+} 
 
-//Deal the Player Card randomized function
+ //Event Listeners for buttons
+ document.getElementById('higher').addEventListener('click',function(){higherCard();})
 
-    //Event Listener for Deal the next card
+
+
+ 
 
 //Deternmine win or loss and update the wallet function
 
 // Reset the game function after 5 seconds and deal the next card.
 function  resetGame(){
     let radioReset=document.getElementsByName('bet')
-        for (i=0;i<radioReset.length;i++)
+        let i=0
+        for (i;i<radioReset.length;i++)
         {
         radioReset[i].checked = false
-        }
+        };
+        document.getElementById('dealerCard').src='./images/playing-card-back.jpg';
+        dealerCard();
     }
 
 //functions to change the message
