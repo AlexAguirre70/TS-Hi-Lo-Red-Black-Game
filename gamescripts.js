@@ -2,7 +2,7 @@ import myJson from './db.json' assert{type:'json'};
 
 
 /*These are the functions to run the card game */
-let wallet=0;
+let wallet=500;
 let wager=0;
 let winnings=0;
 let losses=0;
@@ -67,12 +67,11 @@ function dealerCard(){
 }
 //Deal the Player Card randomized function
 function playerCard(){
-    setTimeout(()=> {
+    
         let randomDCard = (Math.floor(Math.random()*51))+1
-            pValue= myJson.cards[randomDCard].cardValue
+            pValue=myJson.cards[randomDCard].cardValue;
             document.getElementById('playerCard').src = myJson.cards[randomDCard].cardImageUrl
-    },1000)
-}
+    }
 
 //enable the Game Card selection buttons
     function activateBtn() {
@@ -86,10 +85,14 @@ function playerCard(){
 //Hi - Lo Game Selected Function
 function higherCard(){
     playerCard();
+    console.log(wager)
+    console.log(dValue)
+    console.log(pValue)
 
 }
 function lowerCard(){
     playerCard();
+
 } 
 //Red or Black game function
 function blackCard(){
@@ -101,7 +104,9 @@ function redCard(){
 
  //Event Listeners for buttons
  document.getElementById('higher').addEventListener('click',function(){higherCard();})
-
+ document.getElementById('lower').addEventListener('click',function(){lowerCard();})
+ document.getElementById('red').addEventListener('click',function(){redCard();})
+ document.getElementById('black').addEventListener('click',function(){blackCard();})
 
 
  
