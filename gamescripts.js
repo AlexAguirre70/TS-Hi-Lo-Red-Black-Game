@@ -32,7 +32,6 @@ function disableBtn(){
         dButton[x].disabled=true;
     }
 }
-
 // Event listener for Wager input field 
 function  betListener(){
     let radioBtn=document.getElementsByName('bet')
@@ -62,15 +61,17 @@ function dealerCard(){
     setTimeout(()=> {
         let randomDCard = (Math.floor(Math.random()*51))+1
             dValue= myJson.cards[randomDCard].cardValue
+            dColor= myJson.cards[randomDCard].cardColor
             document.getElementById('dealerCard').src = myJson.cards[randomDCard].cardImageUrl
-    },3000)
+    },2500)
 }
 //Deal the Player Card randomized function
 function playerCard(){
     
-        let randomDCard = (Math.floor(Math.random()*51))+1
-            pValue=myJson.cards[randomDCard].cardValue;
-            document.getElementById('playerCard').src = myJson.cards[randomDCard].cardImageUrl
+        let randomPCard = (Math.floor(Math.random()*51))+1
+            pValue=myJson.cards[randomPCard].cardValue
+            pColor=myJson.cards[randomPCard].cardColor
+            document.getElementById('playerCard').src = myJson.cards[randomPCard].cardImageUrl
     }
 
 //enable the Game Card selection buttons
@@ -85,33 +86,83 @@ function playerCard(){
 //Hi - Lo Game Selected Function
 function higherCard(){
     playerCard();
-    console.log(wager)
-    console.log(dValue)
-    console.log(pValue)
-
+    if (pValue>dValue){
+        document.getElementById('message').innerHTML = 'You Won $'+ wager+'. Break the Bank! Play Again!!'
+        wallet=parseInt(wallet)+parseInt(wager)
+                document.getElementById('myWallet').innerHTML= wallet
+     }else if(dValue>pValue){
+        document.getElementById('message').innerHTML = 'The Dealer won that one. Get it back. Play again'
+        wallet=parseInt(wallet)-parseInt(wager)
+        document.getElementById('myWallet').innerHTML= wallet
+    } else{
+        document.getElementById('message').innerHTML = 'Noooo, It was a Tie! Play again'
+    }
+    setTimeout(()=>{
+        resetGame();
+        disableBtn();
+    },2500)      
 }
+
 function lowerCard(){
     playerCard();
-
+    if (pValue<dValue){
+        document.getElementById('message').innerHTML = 'Lower it is. Added $'+ wager+'. to your wallet! Play Again!!'
+        wallet=parseInt(wallet)+parseInt(wager)
+        document.getElementById('myWallet').innerHTML= wallet
+     }else if(dValue<pValue){
+        document.getElementById('message').innerHTML = 'Dang it! The Dealer won that one. Play again'
+        wallet=parseInt(wallet)-parseInt(wager)
+        document.getElementById('myWallet').innerHTML= wallet
+    } else{
+        document.getElementById('message').innerHTML = 'Tied! What are the odds. Play again'
+    }
+    setTimeout(()=>{
+        resetGame();
+        disableBtn();
+    },2500)      
 } 
 //Red or Black game function
 function blackCard(){
     playerCard();
+    if (pColor=="Black"){
+        document.getElementById('message').innerHTML = 'Black it Is!! $'+ wager+' in the bank!'
+        wallet=parseInt(wallet)+parseInt(wager)
+        document.getElementById('myWallet').innerHTML= wallet
+     }else if(pColor=="Red"){
+        document.getElementById('message').innerHTML = 'Nope! Card was Red. Better luck next time'
+        wallet=parseInt(wallet)-parseInt(wager)
+        document.getElementById('myWallet').innerHTML= wallet
+    } else{
+        document.getElementById('message').innerHTML = 'Something is broken. Please contact support'
+    }
+    setTimeout(()=>{
+        resetGame();
+        disableBtn();
+    },2500)      
 }
 function redCard(){
     playerCard();
+    if (pColor=="Red"){
+        document.getElementById('message').innerHTML = 'Red it and weep!! $'+ wager+' Cash money!'
+        wallet=parseInt(wallet)+parseInt(wager)
+        document.getElementById('myWallet').innerHTML= wallet
+     }else if(pColor=="Black"){
+        document.getElementById('message').innerHTML = 'Oh that is not good. Card is Black. Try again'
+        wallet=parseInt(wallet)-parseInt(wager)
+        document.getElementById('myWallet').innerHTML= wallet
+    } else{
+        document.getElementById('message').innerHTML = 'Something is broken. Please contact support'
+    }
+    setTimeout(()=>{
+        resetGame();
+        disableBtn();
+    },2500)      
 } 
-
  //Event Listeners for buttons
  document.getElementById('higher').addEventListener('click',function(){higherCard();})
  document.getElementById('lower').addEventListener('click',function(){lowerCard();})
  document.getElementById('red').addEventListener('click',function(){redCard();})
  document.getElementById('black').addEventListener('click',function(){blackCard();})
-
-
- 
-
-//Deternmine win or loss and update the wallet function
 
 // Reset the game function after 5 seconds and deal the next card.
 function  resetGame(){
@@ -122,6 +173,8 @@ function  resetGame(){
         radioReset[i].checked = false
         };
         document.getElementById('dealerCard').src='./images/playing-card-back.jpg';
+        document.getElementById('playerCard').src='./images/playing-card-back.jpg';
+        document.getElementById('message').innerHTML = 'Make another Wager to Play again'
         dealerCard();
     }
 
@@ -140,8 +193,7 @@ function  resetGame(){
             document.getElementById('myWallet').innerHTML=wallet
             resetGame();
         }, 3000);
-      
-        
+
     }
 
 

@@ -190,7 +190,7 @@
             "cardSuit": "Spades",
             "cardValue":12,
             "cardColor":"Black",
-            "cardImageUrl":  "./images/queem_of_spades.png"
+            "cardImageUrl":  "./images/queen_of_spades.png"
         },
         {
             "cardId":"25",
