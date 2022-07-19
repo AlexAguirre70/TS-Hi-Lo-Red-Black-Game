@@ -156,12 +156,12 @@ function redCard(){
         disableBtn();
     },2500)      
 } 
- //Event Listeners for buttons
+//Add Event listeners
 
- document.getElementById('higher').addEventListener('click',function(){higherCard();})
- document.getElementById('lower').addEventListener('click',function(){lowerCard();})
- document.getElementById('red').addEventListener('click',function(){redCard();})
- document.getElementById('black').addEventListener('click',function(){blackCard();})
+document.getElementById('higher').addEventListener('click',function(){higherCard();})
+document.getElementById('lower').addEventListener('click',function(){lowerCard();})
+document.getElementById('red').addEventListener('click',function(){redCard();})
+document.getElementById('black').addEventListener('click',function(){blackCard();})
 
 // Reset the game function after 5 seconds and deal the next card.
 function  resetGame(){
