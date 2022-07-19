@@ -294,7 +294,7 @@
             "cardSuit": "Diamonds",
             "cardValue":12,
             "cardColor":"Red",
-            "cardImageUrl":  "./images/quuen_of_diamonds.png"
+            "cardImageUrl":  "./images/queen_of_diamonds.png"
         },
         {
             "cardId":"38",
@@ -394,7 +394,7 @@
         },
         {
             "cardId":"50",
-            "cardName":"Queem of Hearts",
+            "cardName":"Queen of Hearts",
             "cardSuit": "Hearts",
             "cardValue":12,
             "cardColor":"Red",
