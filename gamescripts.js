@@ -4,8 +4,6 @@ import myJson from './db.json' assert{type:'json'};
 /*These are the functions to run the card game */
 let wallet=500;
 let wager=0;
-let winnings=0;
-let losses=0;
 let dValue=0;
 let dColor="";
 let dName="";

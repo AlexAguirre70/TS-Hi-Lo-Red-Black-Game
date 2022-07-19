@@ -1,4 +1,4 @@
-/This is card game where the player has to try to guess whether the next card is Hiher or Lower than the dealers card or if the next card will be Black or Red.
+This is card game where the player has to try to guess whether the next card is Hiher or Lower than the dealers card or if the next card will be Black or Red.
 If the player guesses right, they will win their bet amount. If they lose, it will take it from their wallet.
 
 Game requires that each card be stored in an object class with properties of
