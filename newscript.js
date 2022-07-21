@@ -9,9 +9,8 @@ let dName=""
 let pValue=0
 let pColor=""
 let pName=""
-
-var winS= new Audio()
-winS.src ="sounds/crowd-cheer.mp3"
+var winSound= new Audio('./sounds/winner-bell.mp3')
+var loseSound= new Audio('./sounds/loser-sound.mp3')
 
 let gameResult ="Let's Play! Start by Making a Wager!"
 
@@ -23,7 +22,10 @@ window.onload = (event) => {
      disableBtn()
      betListener()
      dealerCard()
-     winS.play
+     winSound.load()
+     loseSound.load()
+     winSound.volume = 0.1
+     loseSound.volume = 0.1
     }
 // Function to disable button
 function disableBtn(){
@@ -92,10 +94,12 @@ function higherCard(){
         newMessage( 'You Won $'+ wager+'. Break the Bank! Play Again!!')
         wallet=parseInt(wallet)+parseInt(wager)
         updateWallet(wallet)
+        winSound.play()
      }else if(dValue>pValue){
        newMessage('The Dealer won that one. Get it back. Play again')
         wallet=parseInt(wallet)-parseInt(wager)
         updateWallet(wallet)
+        loseSound.play()
     } else{
         newMessage ('Noooo, It was a Tie! Play again')
     }
@@ -110,10 +114,12 @@ function lowerCard(){
         newMessage('Lower it is. Added $'+ wager+'. to your wallet! Play Again!!')
         wallet=parseInt(wallet)+parseInt(wager)
         updateWallet(wallet)
+        winSound.play()
      }else if(dValue<pValue){
         newMessage('Dang it! The Dealer won that one. Play again')
         wallet=parseInt(wallet)-parseInt(wager)
         updateWallet(wallet)
+        loseSound.play()
     } else{
         newMessage('Tied! What are the odds. Play again')
     }
@@ -129,10 +135,12 @@ function blackCard(){
         newMessage ('Black it Is!! $'+ wager+' in the bank!')
         wallet=parseInt(wallet)+parseInt(wager)
         updateWallet(wallet)
+        winSound.play()
      }else if(pColor=="Red"){
         newMessage('Nope! Card was Red. Better luck next time')
         wallet=parseInt(wallet)-parseInt(wager)
         updateWallet(wallet)
+        loseSound.play()
     } else{
         newMessage('Something is broken. Please contact support')
     }
@@ -147,10 +155,12 @@ function redCard(){
         newMessage('Red it and weep!! $'+ wager+' Cash money!')
         wallet=parseInt(wallet)+parseInt(wager)
         updateWallet(wallet)
+        winSound.play()
      }else if(pColor=="Black"){
         newMessage('Oh that is not good. Card is Black. Try again')
         wallet=parseInt(wallet)-parseInt(wager)
         updateWallet(wallet)
+        loseSound.play()
     } else{
         newMessage('Something is broken. Please contact support')
     }
