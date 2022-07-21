@@ -1,89 +1,86 @@
 import myJson from './db.json' assert{type:'json'};
 
-
 /*These are the functions to run the card game */
-let wallet=500;
-let wager=0;
-let dValue=0;
-let dColor="";
-let dName="";
-let pValue=0;
-let pColor="";
-let pName="";
+let wallet=500
+let wager=0
+let dValue=0
+let dColor=""
+let dName=""
+let pValue=0
+let pColor=""
+let pName=""
 
 let gameResult ="Let's Play! Start by Making a Wager!"
 
 // wait for window to load before running scripts
-window.onload = (event)=>{
+window.onload = (event) => {
     // Add money to the wallet
     updateWallet(wallet)
     // disable deal buttons on load
-     disableBtn();
-     betListener();
-     dealerCard();
+     disableBtn()
+     betListener()
+     dealerCard()
     }
 // Function to disable button
 function disableBtn(){
     let dButton = document.getElementsByClassName('btn')
     let x= 0
     for (x;x<dButton.length;x++){
-        dButton[x].disabled=true;
+        dButton[x].disabled=true
     }
 }
 // Event listener for Wager input field 
 function  betListener(){
     let radioBtn=document.getElementsByName('bet')
-        let i=0;
+        let i=0
         for(i;i<radioBtn.length;i++){
-        radioBtn[i].addEventListener('change',function(e){
+        radioBtn[i].addEventListener('change',(e) => {
              wager=e.target.value
         //validate the wager amount
              if (wager<=wallet){
-                activateBtn();
-                play();
+                activateBtn()
+                play()
             } else if(wallet>0)
             {
-                notEnough();
-                disableBtn();
+                notEnough()
+                disableBtn()
             }
             else
             {
-                noMoney();
-                disableBtn();
+                noMoney()
+                disableBtn()
             }
         })
         }
 }    
 //Deal the Dealer Card Function
 function dealerCard(){
-    setTimeout(()=> {
-        let randomDCard = (Math.floor(Math.random()*51))+1
-            dValue= myJson.cards[randomDCard].cardValue
-            dColor= myJson.cards[randomDCard].cardColor
-            document.getElementById('dealerCard').src = myJson.cards[randomDCard].cardImageUrl
-    },2500)
+    setTimeout( () => {
+        let randomD = (Math.floor(Math.random()*51))+1
+            dValue= myJson.cards[randomD].cardValue
+            dColor= myJson.cards[randomD].cardColor
+            document.querySelector('#dealerCard').src = myJson.cards[randomD].cardImageUrl
+    },1000)
 }
 //Deal the Player Card randomized function
 function playerCard(){
     
-        let randomPCard = (Math.floor(Math.random()*51))+1
-            pValue=myJson.cards[randomPCard].cardValue
-            pColor=myJson.cards[randomPCard].cardColor
-            document.getElementById('playerCard').src = myJson.cards[randomPCard].cardImageUrl
+        let randomP = (Math.floor(Math.random()*51))+1
+            pValue=myJson.cards[randomP].cardValue
+            pColor=myJson.cards[randomP].cardColor
+            document.querySelector('#playerCard').src = myJson.cards[randomP].cardImageUrl
     }
-
 //enable the Game Card selection buttons
     function activateBtn() {
         let eButton = document.getElementsByClassName('btn')
         let i=0
         for(i; i<eButton.length;i++){
-            eButton[i].disabled=false;
+            eButton[i].disabled=false
         }   
     }
- 
 //Hi - Lo Game Selected Function
 function higherCard(){
-    playerCard();
+    playerCard()
     if (pValue>dValue){
         newMessage( 'You Won $'+ wager+'. Break the Bank! Play Again!!')
         wallet=parseInt(wallet)+parseInt(wager)
@@ -95,14 +92,14 @@ function higherCard(){
     } else{
         newMessage ('Noooo, It was a Tie! Play again')
     }
-    setTimeout(()=>{
-        resetGame();
-        disableBtn();
+    setTimeout(() => {
+        resetGame()
+        disableBtn()
     },2500)      
 }
 
 function lowerCard(){
-    playerCard();
+    playerCard()
     if (pValue<dValue){
         newMessage('Lower it is. Added $'+ wager+'. to your wallet! Play Again!!')
         wallet=parseInt(wallet)+parseInt(wager)
@@ -114,14 +111,14 @@ function lowerCard(){
     } else{
         newMessage('Tied! What are the odds. Play again')
     }
-    setTimeout(()=>{
-        resetGame();
-        disableBtn();
+    setTimeout(() => {
+        resetGame()
+        disableBtn()
     },2500)      
 } 
 //Red or Black game function
 function blackCard(){
-    playerCard();
+    playerCard()
     if (pColor=="Black"){
         newMessage ('Black it Is!! $'+ wager+' in the bank!')
         wallet=parseInt(wallet)+parseInt(wager)
@@ -133,13 +130,13 @@ function blackCard(){
     } else{
         newMessage('Something is broken. Please contact support')
     }
-    setTimeout(()=>{
-        resetGame();
-        disableBtn();
+    setTimeout(() => {
+        resetGame()
+        disableBtn()
     },2500)      
 }
 function redCard(){
-    playerCard();
+    playerCard()
     if (pColor=="Red"){
         newMessage('Red it and weep!! $'+ wager+' Cash money!')
         wallet=parseInt(wallet)+parseInt(wager)
@@ -151,16 +148,16 @@ function redCard(){
     } else{
         newMessage('Something is broken. Please contact support')
     }
-    setTimeout(()=>{
-        resetGame();
-        disableBtn();
+    setTimeout(() => {
+        resetGame()
+        disableBtn()
     },2500)      
 } 
 //Add Event listeners
-document.querySelector('#higher').addEventListener('click',() => {higherCard();})
-document.querySelector('#lower').addEventListener('click',() => {lowerCard();})
-document.querySelector('#red').addEventListener('click',() => {redCard();})
-document.querySelector('#black').addEventListener('click',() => {blackCard();})
+document.querySelector('#higher').addEventListener('click',() => {higherCard()})
+document.querySelector('#lower').addEventListener('click',() => {lowerCard()})
+document.querySelector('#red').addEventListener('click',() => {redCard()})
+document.querySelector('#black').addEventListener('click',() => {blackCard()})
 
 // Reset the game function after 5 seconds and deal the next card.
 function  resetGame(){
@@ -169,11 +166,11 @@ function  resetGame(){
         for (i;i<radioReset.length;i++)
         {
         radioReset[i].checked = false
-        };
-        document.getElementById('dealerCard').src='./images/playing-card-back.jpg';
-        document.getElementById('playerCard').src='./images/playing-card-back.jpg';
+        }
+        document.querySelector('#dealerCard').src='./images/playing-card-back.jpg';
+        document.querySelector('#playerCard').src='./images/playing-card-back.jpg';
         newMessage('Make another Wager to Play again')
-        dealerCard();
+        dealerCard()
     }
 
 //functions to change the message
@@ -187,10 +184,10 @@ function  resetGame(){
         newMessage( "You're out of cash. Please gamble responsibly")
         setTimeout(() => {
             newMessage("I've reset your wallet. Play again")
-            wallet=500;   
+            wallet=500   
             updateWallet(wallet)
-            resetGame();
-        }, 3000);
+            resetGame()
+        }, 3000)
 
     }
 //Message function
