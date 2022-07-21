@@ -10,6 +10,9 @@ let pValue=0
 let pColor=""
 let pName=""
 
+var winS= new Audio()
+winS.src ="sounds/crowd-cheer.mp3"
+
 let gameResult ="Let's Play! Start by Making a Wager!"
 
 // wait for window to load before running scripts
@@ -20,6 +23,7 @@ window.onload = (event) => {
      disableBtn()
      betListener()
      dealerCard()
+     winS.play
     }
 // Function to disable button
 function disableBtn(){
