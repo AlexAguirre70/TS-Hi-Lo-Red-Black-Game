@@ -54,9 +54,13 @@ function  betListener(){
         }
 }    
 //Deal the Dealer Card Function
+function randonCard(){
+    let num=(Math.floor(Math.random()*51))+1
+    return num
+}
 function dealerCard(){
     setTimeout( () => {
-        let randomD = (Math.floor(Math.random()*51))+1
+        let randomD = randonCard()
             dValue= myJson.cards[randomD].cardValue
             dColor= myJson.cards[randomD].cardColor
             document.querySelector('#dealerCard').src = myJson.cards[randomD].cardImageUrl
@@ -64,8 +68,7 @@ function dealerCard(){
 }
 //Deal the Player Card randomized function
 function playerCard(){
-    
-        let randomP = (Math.floor(Math.random()*51))+1
+        let randomP = randonCard()
             pValue=myJson.cards[randomP].cardValue
             pColor=myJson.cards[randomP].cardColor
             document.querySelector('#playerCard').src = myJson.cards[randomP].cardImageUrl
@@ -97,7 +100,6 @@ function higherCard(){
         disableBtn()
     },2500)      
 }
-
 function lowerCard(){
     playerCard()
     if (pValue<dValue){
@@ -159,7 +161,7 @@ document.querySelector('#lower').addEventListener('click',() => {lowerCard()})
 document.querySelector('#red').addEventListener('click',() => {redCard()})
 document.querySelector('#black').addEventListener('click',() => {blackCard()})
 
-// Reset the game function after 5 seconds and deal the next card.
+// Reset the game function and deal the next card.
 function  resetGame(){
     let radioReset=document.getElementsByName('bet')
         let i=0
